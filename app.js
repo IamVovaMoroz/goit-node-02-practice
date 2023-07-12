@@ -3,6 +3,8 @@ const logger = require('morgan')
 const cors = require('cors')
 
 const contactsRouter = require('./routes/api/contacts')
+// импортируем router
+const booksRouter = require("./routes/api/books")
 
 const app = express()
 
@@ -10,7 +12,10 @@ const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short'
 
 app.use(logger(formatsLogger))
 app.use(cors())
-app.use(express.json())
+// app.use(express.json())
+
+// прописали путь вызовов для  booksRouter
+app.use("/api/books", booksRouter)
 
 app.use('/api/contacts', contactsRouter)
 
