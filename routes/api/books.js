@@ -148,8 +148,8 @@ router.delete('/:id', async (req, res, next) => {
     if (!result) {
       throw HttpError(404, "Not found");
     }
-    res.status(204).send();
-    // res.json({ message: "Delete success" });
+    // res.status(204).send();
+    res.json({ message: "Delete success" });
   } catch (error) {
     next(error);
   }

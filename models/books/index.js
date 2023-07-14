@@ -64,17 +64,27 @@ const updateById = async (id, data) => {
   return books[index]
 }
 
-const deleteById = async id => {
-  // получаем вначале весь обьект
-  const books = await getAll()
-  const index = books.findIndex(item => item.id === Number(id))
-  if (index === -1) {
-    return null
+// const deleteById = async id => {
+//   // получаем вначале весь обьект
+//   const books = await getAll()
+//   const index = books.findIndex(item => item.id === id)
+//   if (index === -1) {
+//     return null
+//   }
+//   // Метод splice() изменяет исходный массив, удаляя элементы, и возвращает массив удаленных элементов.
+//   const [result] = books.splice(index, 1)
+//   await fs.writeFile(booksPath, JSON.stringify(books, null, 2))
+//   return result
+// }
+const deleteById = async(id) => {
+  const books = await getAll();
+  const index = books.findIndex(item => item.id === id);
+  if(index === -1){
+      return null;
   }
-  // Метод splice() изменяет исходный массив, удаляя элементы, и возвращает массив удаленных элементов.
-  const [result] = books.splice(index, 1)
-  await fs.writeFile(booksPath, JSON.stringify(books, null, 2))
-  return result
+  const [result] = books.splice(index, 1);
+  await fs.writeFile(booksPath, JSON.stringify(books, null, 2));
+  return result;
 }
 
 module.exports = {
@@ -84,3 +94,4 @@ module.exports = {
   updateById,
   deleteById
 }
+
