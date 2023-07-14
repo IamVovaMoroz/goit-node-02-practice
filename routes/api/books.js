@@ -141,6 +141,19 @@ try{
 })
 // запрос на удаление книги
 
+router.delete('/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await books.deleteById(id);
+    if (!result) {
+      throw HttpError(404, "Not found");
+    }
+    res.status(204).send();
+    // res.json({ message: "Delete success" });
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router
 
