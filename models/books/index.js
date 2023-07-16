@@ -4,7 +4,7 @@ const fs = require('fs/promises')
 const path = require('path')
 const { nanoid } = require('nanoid')
 
-// const booksPath = path.join(__dirname, 'books.json')
+
 
 // меняем при перенесинии в папку
 const booksPath = path.join(__dirname, '..', 'books', 'books.json')
