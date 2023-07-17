@@ -53,28 +53,28 @@ router.get('/', async (req, res, next) => {
 // })
 
 // ВАРИАНТ 2 ОШИБКИ часто встречающийся
-// router.get('/:id', async (req, res) => {
-//     // так можем прочитать, какой ид ввели  console.log(req.params)
-//   // если нет с таким ИД обьекта - ошибка 404!
-//     try {
-//       const { id } = req.params
-//       const result = await books.getById(id)
-//       if(!result){
-//         const error = new Error("")
-//         error.status = 404
-//         throw error
-//         //   return res.status(404).json({
-//         //       message: "Not found"
-//         //   })
-//       }
-//       res.json(result)
-//     } catch (error) {
-//         const {status = 500, message = "Server error"} = error
-//       res.status(status).json({
-//         message
-//       })
-//     }
-//   })
+router.get('/:id', async (req, res) => {
+    // так можем прочитать, какой ид ввели  console.log(req.params)
+  // если нет с таким ИД обьекта - ошибка 404!
+    try {
+      const { id } = req.params
+      const result = await books.getById(id)
+      if(!result){
+        const error = new Error("")
+        error.status = 404
+        throw error
+        //   return res.status(404).json({
+        //       message: "Not found"
+        //   })
+      }
+      res.json(result)
+    } catch (error) {
+        const {status = 500, message = "Server error"} = error
+      res.status(status).json({
+        message
+      })
+    }
+  })
 // ВАРИАНТ 3 ОШИБКИ с импортом ошибки с отдельного файла
 router.get('/:id', async (req, res, next) => {
     // так можем прочитать, какой ид ввели  console.log(req.params)
