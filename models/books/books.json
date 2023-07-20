@@ -1,12 +1,42 @@
 [
   {
-    "id": "aaaaaa",
-    "title": "New Book Title",
-    "author": "D. Moroz"
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee"
   },
   {
-    "id": "ccccc",
-    "title": "Book 8",
-    "author": "Author 8"
+    "title": "1984",
+    "author": "George Orwell"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien"
+  },
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien"
   }
 ]
