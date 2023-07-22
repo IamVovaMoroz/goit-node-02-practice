@@ -9,8 +9,10 @@ app.listen(3000, () => {
 
 // const app = require('./app')
 
+
+
 // // подключаем по ссылке с mongoDB
-// const DB_HOST = "mongodb+srv://VolodymyrMoroz:NOni01041983@cluster0.oyfrio4.mongodb.net/books_base"
+// const DB_HOST = "mongodb+srv://VolodymyrM:NOni01041983@cluster0.ls7r7f1.mongodb.net/db-contacts"
 // // при обновлении чтобы не скинуло
 // mongoose.set('strictQuery', true)
 
